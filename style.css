@@ -78,6 +78,7 @@ html {
   min-height: 100vh;
   background-color: #dfe1e4;
   scroll-margin-top: 35px; 
+  overflow-anchor: none;
 }
 .page-section-features {
   min-height: 100vh;
@@ -160,19 +161,43 @@ html {
   margin-bottom: 24px;    
   line-height: 1.2;      
 }
-
 .bottom-banner-text-container p {
   font-size: 25px;
   line-height: 1.6;       
   color: #4A5568;
   text-align: justify;
 }
-
 .bottom-banner-container img {
   height: 650px;
   width: auto;           
   object-fit: contain;
   justify-content: center;
+}
+#ch {
+  display: none;
+}
+#ch:checked ~ .extra-content {
+  display: block;
+}
+#ch:checked ~ label {
+  display: none;
+}
+.extra-content {
+  margin-top: 30px;
+  display: none;
+  font-size: 25px;
+  line-height: 1.6;       
+  color: #4A5568;
+  text-align: justify;
+}
+label {
+  margin-top: 20px;
+  font-style: italic;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+  color: #4A5568;
 }
 /* Fetaures Part*/
 .features-hero-container {
@@ -499,6 +524,10 @@ html {
   height: 80px;
   width: auto;
 }
+.email-link {
+  color: #ffffff;
+  text-decoration-color: #ffffff;
+}
 /* Footer Part */
 .footer-banner {
   background-color: #f1f1f2;
@@ -548,6 +577,7 @@ html {
     margin-top: 50px;
     width: 100%;
     padding: 0 15px;
+    overflow-anchor: none;
   }  
   /* Navigation Bar */
   .navbar {
@@ -606,7 +636,7 @@ html {
     justify-content: center; 
   }
   .download-badge-container img {
-    height: 120px;
+    height: 100px;
   }
   /* About Section */
   .bottom-banner-container {
@@ -632,6 +662,14 @@ html {
     height: auto;
     max-width: 100%;
     margin-top: 20px;
+  }
+  label {
+    margin: 0;
+    width: 100%;
+  }
+  .extra-content {
+    text-align: center;
+    width: 100%;
   }
   /* Feature Section */  
   .features-text-img-container {
